@@ -1,10 +1,10 @@
 @base_url = https://localhost:7015/api/categoria
 
 ### Listar Categorias ###
-GET {{base_url}}/listar
+GET https://localhost:7015/api/categoria/listar
 
 ### Criar Categoria ###
-POST {{base_url}}/cadastrar
+POST https://localhost:7015/api/categoria/cadastrar
 Content-Type: application/json
 
 {

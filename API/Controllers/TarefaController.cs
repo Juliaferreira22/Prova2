@@ -52,4 +52,13 @@ public class TarefaController : ControllerBase
             return BadRequest(e.Message);
         }
     }
+
+      [HttpPut]
+        [Route("alterar")]
+        public IActionResult Alterar([FromBody] Tarefa tarefa)
+        {
+            _context.Tarefas.Update(tarefa);
+            _context.SaveChanges();
+            return Created("", tarefa);
+        }
 }
